@@ -1,0 +1,25 @@
+skontroluj ci funkcionality vypisuju vsetky meniny (nie len prve meniny) v jednom dni!!!!
+- asi len showCalendar() vypisuje pod seba meniny toho isteho dna
+
+absolute path k data priecinku: C:\Users\Asus\Desktop\CSharpDotnetZadanie2\Uniza.Namedays\data\namedays-sk.csv
+absolute path k programu: C:\Users\Asus\Desktop\CSharpDotnetZadanie2\Uniza.Namedays.ViewerConsoleApp\bin\Debug\net6.0\Uniza.Namedays.ViewerConsoleApp.exe
+
+vymazal som jeden riadok z namedays-sk.csv
+riadok bol s datumom 29.2 - co je neplatny datum a nepojde to dat do typu DateTime
+
+neotestovany Remove() v namedayCalendar
+
+diakritika nefunguje
+- nemam ani na vypis statistiky- mena na zaciatocne pismena s makcenom - Č, Š, Ť, ...
+  - v regexi to funguje, najde 4 mena zacinajuce na Š ... ale na konzolu sa Š vypise ako S
+
+este skontroluj volbu 3 vo ViewerConsoleApp ci funguje nacitavanie regex veci
+- lebo niektore regex znaky su specialne (jak \n -> ze treba davat lomitko v retazci) a ked user zada bez lomitka tak co sa stane
+	- toto neviem ci je pravda, len spekulacia
+
+console.clear() funguje len ciastocne (nevymaze uplne vsetky riadky) vo visuale, ale vo windows CMD funguje OK
+
+v CMD nepojde spustit program, lebo mam sitnu relativnu cestu ked loadujem kalendar
+- ale s absolutnou cestou to ide v CMD OK
+
+GetChoiceFromUser() ma trochu sus logiku input == "6"
